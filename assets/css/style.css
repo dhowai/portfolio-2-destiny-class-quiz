@@ -135,6 +135,22 @@ body {
     display: none;
 }
 
+/* Home page */
+
+#hero-image {
+    background: url(../images/imgbin_destiny-2-computer-mouse-computer-keyboard-mouse-mats-razer-inc-png.png) center no-repeat #0090B8;
+    height: 100%;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: relative;
+    top: 20%;
+    color: white;
+    font-size: xx-large;
+}
+
 /* media Queries */
 
 @media screen and (max-width: 600px) {
