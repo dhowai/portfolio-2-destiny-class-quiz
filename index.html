@@ -16,18 +16,19 @@
     <title>Destiny 2 Class Quiz</title>
 </head>
 <body>
-    <div>
-        <h1>Welcome Guardian</h1>
+    <div id="landing-page">
+        <h1 id="landing-text">Welcome Guardian</h1>
         <button>Let's Begin</button>
     </div>
     <div>
         <form action="/home.html">
-        
+            <h1>Login</h1>
+
             <label for="email"><b>Email</b></label>
-            <input type="text">
+            <input type="text" id="email" placeholder="Enter Email" name="email" required>
 
             <label for="username"><b>Username</b></label>
-            <input type="text">
+            <input type="text" id="user" placeholder="Enter Username" name="username" required>
 
             <button>Login</button>
             <button>Close</button>
