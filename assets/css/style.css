@@ -53,3 +53,53 @@ body {
     font-family: Overpass, sans-serif;
     text-transform: uppercase;
 }
+
+/* The popup form */
+.login-popup {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Style for form container */
+.login-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.login-container input[type=text], .login-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    background: #f1f1f1;
+}
+
+.login-container input[type=text]:focus, .login-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* style for submit/login button */
+.login-container .btn {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* add color for cancel button */
+.login-container .cancel {
+    background-color: red;
+}
+
+/* Hover over effect to buttons */
+.login-container .btn:hover, .open-login-button:hover {
+    opacity: 1;
+}
