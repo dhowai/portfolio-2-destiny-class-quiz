@@ -153,7 +153,7 @@ body {
 
 .charater-class {
     background: chocolate;
-    margin: 20px;
+    /*margin: 20px;*/
 }
 
 .container1 {
@@ -176,6 +176,10 @@ img {
 
 .img-col {
     flex-basis: 20%;
+}
+
+.text-col {
+    flex-basis: 50%;
 }
 
 /* media Queries */
