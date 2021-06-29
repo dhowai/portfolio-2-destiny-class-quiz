@@ -71,14 +71,14 @@ body {
 }
 
 /* Full-width input fields */
-.login-container input[type=text], .login-container input[type=password] {
+.login-container input[type=text] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     background: #f1f1f1;
 }
 
-.login-container input[type=text]:focus, .login-container input[type=password]:focus {
+.login-container input[type=text]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -188,6 +188,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-right: 5px;
 }
 
 .footer-btn {
@@ -208,7 +209,7 @@ footer {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 400px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -249,6 +250,23 @@ footer {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.contact-form {
+    display: grid;
+    text-align: left;
+}
+
+.contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=submit], .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    background: #f1f1f1;
+}
+
+.contact-form input[type=text]:focus, .contact-form input[type=email]:focus, .contact-form input[type=submit], .contact-form textarea {
+    background-color: #ddd;
+    border-color: black;
 }
 
 /* media Queries */

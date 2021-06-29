@@ -58,11 +58,32 @@
         </div>
     </section>
     <footer>
-        <button id="myBtn" class="footer-btn">About</button>
-        <div id="myModal" class="modal">
+        <button id="aboutBtn" class="footer-btn">About</button>
+        <button id="contactBtn" class="footer-btn">Contact</button>
+        <div id="aboutModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <p>This is Website that offers an inside to the class/character selection for the Destiny 2 the game. With the help of a specially designed quiz, you will find out the class best for you in a matter of minutes</p>
+            </div>
+        </div>
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form class="contact-form" action="https://formdump.codeinstitute.net/" method="POST">
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname" id="fname" placeholder="Enter First Name" required>
+                
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="lname" id="lname" placeholder="Enter Last Name">
+                
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                
+                    <label for="subject">Subject:</label>
+                    <textarea name="subject" id="subject" placeholder="Enter Text Here" style="height: 200px;" required></textarea>
+    
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
     </footer>
