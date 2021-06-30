@@ -8,6 +8,19 @@ function closeLogin() {
     document.getElementById("login").style.display = "none";
 }
 
+//Save User Email and Username to Localstorage
+
+const rememberMe = document.querySelector(".remember");
+const form = document.querySelector("form");
+const getEmail = document.querySelector("#email");
+const getName = document.querySelector("#user");
+const submitBtn = document.querySelector("#submitdetails");
+
+submitBtn.addEventListener("click", function() {
+  localStorage.setItem("email", getEmail.value);
+  localStorage.setItem("user", getName.value);
+});
+
 /* Navigation */
 
 function navFunction() {
