@@ -10,16 +10,13 @@ function closeLogin() {
 
 //Save User Email and Username to Localstorage
 
-const rememberMe = document.querySelector(".remember");
-const form = document.querySelector("form");
-const getEmail = document.querySelector("#email");
-const getName = document.querySelector("#user");
-const submitBtn = document.querySelector("#submitdetails");
-
-submitBtn.addEventListener("click", function() {
-  localStorage.setItem("email", getEmail.value);
-  localStorage.setItem("user", getName.value);
-});
+const signUp = e => {
+  let formData = {
+    email: document.getElementById('email').value,
+    user: document.getElementById('user').value
+  }
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
 
 /* Navigation */
 
