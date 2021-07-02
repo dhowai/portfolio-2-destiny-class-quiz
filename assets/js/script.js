@@ -8,7 +8,7 @@ function closeLogin() {
     document.getElementById("login").style.display = "none";
 }
 
-//Save User Email and Username to Localstorage
+//Save User Email and Username to Localstorage (might change)
 
 const signUp = e => {
   let formData = {
@@ -31,7 +31,7 @@ function navFunction() {
 
 /* Footer */
 
-// Get the modal
+// Get the modal (make 1 modal/hide 1 element)
 var modal1 = document.getElementById("aboutModal");
 var modal2 = document.getElementById("contactModal");
 
@@ -68,3 +68,63 @@ window.onclick = function(event) {
     modal2.style.display = "none";
   }
 }
+
+/* Quiz */
+
+// Create a listener for clicks on the 'start the quiz' button on the front page. 
+document.getElementById("beginquiz").addEventListener("click", startQuiz);
+
+// When the button is clicked the 'intro' div is hidden and the first question div is displayed
+function startQuiz () {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("q1").style.display = "block";
+}
+
+// Create an array object to store all the quiz answers. Each selected answer should increase the category score by 1. The highest score will be the personality 'type' in the results. 
+const answerData = { // one object, with names as keys, scores as values
+    Warlock: 0,
+    Hunter: 0,
+    Titan: 0
+};
+
+// Get all of the .buttons elements
+var buttons = document.querySelectorAll(".button");
+// Add an onclick event listener to every element with a class of .buttons
+for (var i = 0 ; i < buttons.length ; i++) {
+    // When an element with .buttons is clicked, run the function called buttonClicked
+    buttons[i].onclick = buttonClicked;
+    }
+
+// Define what buttonClicked does
+function buttonClicked(e) {
+    var target = e.target; // 1. `this` is parent, need target
+    console.log(target);
+    // Get the current element's data-score value
+    var selectedType = target.dataset.score;   // 2. score is the value
+    // Increase the selected answer's 'type' by 1
+    console.log(selectedType);
+    answerData[selectedType]++;  // 4. after change of structure
+    // Hide the current question div
+    this.parentElement.style.display = "none";
+    // Work out what the next question div is
+    var nextQuestion = this.parentElement.dataset.next;
+    // Display the next question element
+    document.getElementById(nextQuestion).style.display = "block";
+    if (nextQuestion === 'result') endQuiz()
+  }
+  
+  function endQuiz() {
+  
+    let myTypes = Object.keys(Object.fromEntries(Object.entries(answerData).reduce((b, a) => {
+      if (b.length === 0) return [a]
+      let bb = b[0];
+      if (+a[1] > +bb[1]) b = [a];
+      else if (+a[1] === +bb[1]) b.push(a)
+      return b;
+    }, [])))
+    let result = ''
+    if (myTypes.length === 1) result = 'You are a ' + myTypes[0];
+    else result = 'You could either be a ' + myTypes.join(' or a ');
+    document.getElementById('result').innerHTML = result;
+  
+  }
