@@ -51,23 +51,24 @@ btn2.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal1.style.display = "none";
-  modal2.style.display = "none";
+span.onclick = function(event1) {
+  if (event1 = modal1) {
+    modal1.style.display = "none";
+  } else if (event1 == modal2) {
+    modal2.style.display = "none";
+  }
 }
 
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal1) {
+window.onclick = function(event2) {
+  if (event2.target == modal1) {
     modal1.style.display = "none";
-  }
-}
-window.onclick = function(event) {
-  if (event.target == modal2) {
+  } else if (event2.target == modal2) {
     modal2.style.display = "none";
   }
 }
+
 
 /* Quiz */
 
