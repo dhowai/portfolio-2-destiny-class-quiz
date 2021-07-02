@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_eMO4nwkcguskMvgVTEYV1");
+        })();
+    </script>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Destiny 2 Class Quiz</title>
@@ -69,7 +75,8 @@
         <div id="contactModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form class="contact-form" action="https://formdump.codeinstitute.net/" method="POST">
+                <form class="contact-form" id="contact-form" action="https://formdump.codeinstitute.net/" method="POST">
+                    <input type="hidden" name="contact_number">
                     <label for="fname">First Name:</label>
                     <input type="text" name="fname" id="fname" placeholder="Enter First Name" required>
                 
