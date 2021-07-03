@@ -102,11 +102,11 @@ const answerData = { // one object, with names as keys, scores as values
     Titan: 0
 };
 
-// Get all of the .buttons elements
+// Get all of the .choices elements
 var buttons = document.querySelectorAll(".choices");
-// Add an onclick event listener to every element with a class of .buttons
+// Add an onclick event listener to every element with a class of .choices
 for (var i = 0 ; i < buttons.length ; i++) {
-    // When an element with .buttons is clicked, run the function called buttonClicked
+    // When an element with .choices is clicked, run the function called buttonClicked
     buttons[i].onclick = buttonClicked;
     }
 
