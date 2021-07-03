@@ -29,88 +29,90 @@
             <button id="beginquiz">Start the quiz</button>
         </div>
       
-        <div class="question" id="q1"  data-next="q2">
+        <div class="question" id="q1" data-next="q2">
             <h2>Question 1:</h2>
             <p>How would you prefer to get around? </p>
-            <ol class="button">
-                <li data-score="Hunter">Double Jump</li>
-                <li data-score="Warlock">Float</li>
-                <li data-score="Titan">Jetpack</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Hunter">Double Jump</button>
+                <button class="btn" data-score="Warlock">Float</button>
+                <button class="btn" data-score="Titan">Jetpack</button>
+            </div>
         </div>
       
         <div class="question" id="q2" data-next="q3">
             <h2>Question 2:</h2>
             <p>What ability would you choose? </p>
-            <ol class="button">
-                <li data-score="Titan">Barricade</li>
-                <li data-score="Warlock">Rift</li>
-                <li data-score="Hunter">Dodge</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Titan">Barricade</button>
+                <button class="btn" data-score="Warlock">Rift</button>
+                <button class="btn" data-score="Hunter">Dodge</button>
+            </div>
         </div>
       
         <div class="question" id="q3" data-next="q4">
             <h2>Question 3:</h2>
             <p>What title appeals to you?</p>
-            <ol class="button">
-                <li data-score="Warlock">Space magician </li>
-                <li data-score="Titan">Absolute tank/unit</li>
-                <li data-score="Hunter">Stealth gunslinger</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Warlock">Space magician </button>
+                <button class="btn" data-score="Titan">Absolute tank/unit</button>
+                <button class="btn" data-score="Hunter">Stealth gunslinger</button>
+            </div>
         </div>
       
         <div class="question" id="q4" data-next="q5">
             <h2>Question 4:</h2>
             <p>Arc What super/alt sounds interesting to you?</p>
-            <ol class="button">
-                <li data-score="Hunter">Staff wielder</li>
-                <li data-score="Titan">Thunder fists</li>
-                <li data-score="Warlock">Electric beam/fingers</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Hunter">Staff wielder</button>
+                <button class="btn" data-score="Titan">Thunder fists</button>
+                <button class="btn" data-score="Warlock">Electric beam/fingers</button>
+            </div>
         </div>
         <div class="question" id="q5" data-next="q6">
             <h2>Question 5:</h2>
             <p>Solar What super/alt sounds interesting to you?</p>
-            <ol class="button">
-                <li data-score="Titan">Hammer time</li>
-                <li data-score="Warlock">Flame blade</li>
-                <li data-score="Hunter">Golden gun</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Titan">Hammer time</li>
+                <button class="btn" data-score="Warlock">Flame blade</li>
+                <button class="btn" data-score="Hunter">Golden gun</li>
+            </div>
         </div>
 
         <div class="question" id="q6" data-next="q7">
             <h2>Question 6:</h2>
             <p>Void What super/alt sounds interesting to you?</p>
-            <ol class="button">
-                <li data-score="Warlock">Space energy ball</li>
-                <li data-score="Hunter">Elusive archer</li>
-                <li data-score="Titan">Shield defence</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Warlock">Space energy ball</button>
+                <button class="btn" data-score="Hunter">Elusive archer</button>
+                <button class="btn" data-score="Titan">Shield defence</button>
+            </div>
         </div>
 
         <div class="question" id="q7" data-next="q8">
             <h2>Question 7:</h2>
             <p>Melee preference?</p>
-            <ol class="button">
-                <li data-score="Titan">Punchy boi</li>
-                <li data-score="Hunter">Knife to meet you</li>
-                <li data-score="Warlock">open palm slap</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Titan">Punchy boi</button>
+                <button class="btn" data-score="Hunter">Knife to meet you</button>
+                <button class="btn" data-score="Warlock">open palm slap</button>
+            </div>
         </div>
 
         <div class="question" id="q8" data-next="result">
             <h2>Question 8:</h2>
             <p>What play style appeals to you?</p>
-            <ol class="button">
-                <li data-score="Titan">Tank</li>
-                <li data-score="Hunter">Mobility</li>
-                <li data-score="Hunter">Ability</li>
-            </ol>
+            <div class="choices">
+                <button class="btn" data-score="Titan">Tank</button>
+                <button class="btn" data-score="Hunter">Mobility</button>
+                <button class="btn" data-score="Hunter">Ability</button>
+            </div>
         </div>
+
         <div id="result">
             <h2>Class Results</h2>
         </div>
     </main>
+    
     <footer>
         <button id="aboutBtn" class="footer-btn">About</button>
         <button id="contactBtn" class="footer-btn">Contact</button>

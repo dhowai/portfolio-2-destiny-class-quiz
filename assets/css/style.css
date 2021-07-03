@@ -292,21 +292,24 @@ footer {
     display: none;
     }
 
-.button li {
-    border: 1px solid;
-    border-radius: 3px;
-    background-color: #eee;
-    text-align: center;
-    line-height: 2em;
-    padding: 0.5em;
-    margin: 0.5em;
-    width: 100%;
-    margin: 0 auto;
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.button li:hover {
-    color: #bfbfbf;
-    background-color: #555;
+.btn {
+    border: 2px solid;
+    background-color: grey;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
 }
 
 #intro, .question, #result {
