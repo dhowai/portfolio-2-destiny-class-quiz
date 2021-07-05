@@ -69,19 +69,20 @@ window.onclick = function(event2) {
   }
 }
 
+// Contact form in footer modal
 window.onload = function() {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
-      // generate a five digit number for the contact_number variable
-      this.contact_number.value = Math.random() * 100000 | 0;
-      // these IDs from the previous steps
-      emailjs.sendForm('contact_service', 'contact_form', this)
+      
+      // IDs from contact form
+      emailjs.sendForm('contact_service', 'contact_form', event.target)
           .then(function() {
               console.log('SUCCESS!');
           }, function(error) {
               console.log('FAILED...', error);
           });
-  });
+          event.target.reset();
+  }); 
 }
 
 /* Quiz */
