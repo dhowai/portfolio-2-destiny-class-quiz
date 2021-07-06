@@ -93,16 +93,16 @@ document.getElementById("beginquiz").addEventListener("click", startQuiz);
 let currentQuestion = 0;
 
 // When the button is clicked the 'intro' div is hidden and the question div is displayed
-function startQuiz () {
+function startQuiz() {
     document.getElementById("intro").style.display = "none";
-    document.getElementById("q1").style.display = "block";
+    document.getElementById("question").style.display = "block";
     choiceButtonsHandler();
     updateQuestion();
 }
 
 function choiceButtonsHandler() {
   // Get all of the .choices elements
-  const buttons = document.querySelector(".choices .btn");
+  const buttons = document.querySelectorAll(".choices .btn");
   // Onclick event listener to every element with the class of .choices
   for (const btn of buttons) {
     // When an element with .choices is clicked, run the function called optionButtonClicked
@@ -118,7 +118,7 @@ const answerData = { // one object, with names as keys, scores as values
 };
 
 function updateQuestion() {
-  const currentQuestionObj = question[currentQuestion];
+  const currentQuestionObj = questions[currentQuestion];
   const questionDiv = document.getElementById("question");
   questionDiv.querySelector(".question-title").innerHTML = "Question" + (currentQuestion + 1).toString() + ":";
   questionDiv.querySelector(".question-text").innerHTML = currentQuestionObj.question;
@@ -147,19 +147,17 @@ function optionButtonClicked(e) {
   }
   
   function endQuiz() {
-  
-    let myTypes = Object.keys(Object.fromEntries(Object.entries(answerData).reduce((b, a) => {
-      if (b.length === 0) return [a]
-      let bb = b[0];
-      if (+a[1] > +bb[1]) b = [a];
-      else if (+a[1] === +bb[1]) b.push(a)
-      return b;
-    }, [])))
-    let result = ''
-    if (myTypes.length === 1) result = 'You are a ' + myTypes[0];
-    else result = 'You could either be a ' + myTypes.join(' or a ');
-    document.getElementById('result').innerHTML = result;
-  
+    console.log("Scores were ", answerData);
+    document.getElementById("question").style.display = "none";
+    document.getElementById("result").style.display = "block";
+    // Sort the scores in descending order and check the top 2 character types
+    const sortedScores = Object.entries(answerData).sort((type1, type2) => type2[1] - type1[1]);
+    myTypes = [sortedScores[0][0]];
+    if (sortedScores[1][1] === sortedScores[0][1]) myTypes.push(sortedScores[1][0]);
+    let result = '';
+    if (myTypes.length === 1) result = "You are a " + myTypes[0];
+    else result = "You could either be a " + myTypes.join(" or a ");
+    document.querySelector("#result .resultText").innerHTML = result + "."
   }
 
   // ---- Questions and Choices ---- //
