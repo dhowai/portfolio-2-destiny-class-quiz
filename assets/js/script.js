@@ -96,11 +96,11 @@ let currentQuestion = 0;
 function startQuiz () {
     document.getElementById("intro").style.display = "none";
     document.getElementById("q1").style.display = "block";
-    choiceButtons();
+    choiceButtonsHandler();
     updateQuestion();
 }
 
-function choiceButtons() {
+function choiceButtonsHandler() {
   // Get all of the .choices elements
   const buttons = document.querySelector(".choices .btn");
   // Onclick event listener to every element with the class of .choices
@@ -117,13 +117,17 @@ const answerData = { // one object, with names as keys, scores as values
     Titan: 0
 };
 
-// Get all of the .choices elements
-var buttons = document.querySelectorAll(".choices");
-// Add an onclick event listener to every element with a class of .choices
-for (var i = 0 ; i < buttons.length ; i++) {
-    // When an element with .choices is clicked, run the function called buttonClicked
-    buttons[i].onclick = buttonClicked;
-    }
+function updateQuestion() {
+  const currentQuestionObj = question[currentQuestion];
+  const questionDiv = document.getElementById("question");
+  questionDiv.querySelector(".question-title").innerHTML = "Question" + (currentQuestion + 1).toString() + ":";
+  questionDiv.querySelector(".question-text").innerHTML = currentQuestionObj.question;
+  const choiceButtons = questionDiv.querySelector(".choices").querySelectorAll(".btn");
+  choiceButtons.forEach((btn, index) => {
+    btn.setAttribute("data-score", currentQuestionObj.options[index].score);
+    btn.innerHTML = currentQuestionObj.options[index].text;
+  });
+}
 
 // Define what buttonClicked does
 function buttonClicked(e) {
@@ -158,3 +162,135 @@ function buttonClicked(e) {
     document.getElementById('result').innerHTML = result;
   
   }
+
+  // ---- Questions and Choices ---- //
+
+  const questions = [{
+    question: "How would you prefer to get around?",
+    options: [{
+      score: "Hunter",
+      text: "Double Jump"
+    },
+    {
+      score: "Warlock",
+      text: "Float"
+    },
+    {
+      score: "Titan",
+      text: "Jetpack"
+    }
+  ]
+},
+{
+  question: "What ability would you choose?",
+  options: [{
+      score: "Titan",
+      text: "Barricade"
+    },
+    {
+      score: "Warlock",
+      text: "Rift"
+    },
+    {
+      score: "Hunter",
+      text: "Dodge"
+    }
+  ]
+},
+{
+  question: "What title appeals to you?",
+  options: [{
+      score: "Warlock",
+      text: "Space magician"
+    },
+    {
+      score: "Titan",
+      text: "Absolute tank/unit"
+    },
+    {
+      score: "Hunter",
+      text: "Stealth gunslinger"
+    }
+  ]
+},
+{
+  question: "Arc What super/alt sounds interesting to you?",
+  options: [{
+      score: "Hunter",
+      text: "Staff wielder"
+    },
+    {
+      score: "Titan",
+      text: "Thunder fists"
+    },
+    {
+      score: "Warlock",
+      text: "Electric beam/fingers"
+    }
+  ]
+},
+{
+  question: "Solar What super/alt sounds interesting to you?",
+  options: [{
+      score: "Titan",
+      text: "Hammer time"
+    },
+    {
+      score: "Warlock",
+      text: "Flame blade"
+    },
+    {
+      score: "Hunter",
+      text: "Golden gun"
+    }
+  ]
+},
+{
+  question: "Void What super/alt sounds interesting to you?",
+  options: [{
+      score: "Warlock",
+      text: "Space energy ball"
+    },
+    {
+      score: "Hunter",
+      text: "Elusive archer"
+    },
+    {
+      score: "Titan",
+      text: "Shield defence"
+    }
+  ]
+},
+{
+  question: "What play style appeals to you?",
+  options: [{
+      score: "Titan",
+      text: "Tank"
+    },
+    {
+      score: "Hunter",
+      text: "Mobility"
+    },
+    {
+      score: "Warlock",
+      text: "Ability"
+    }
+  ]
+},
+{
+  question: "Melee preference?",
+  options: [{
+      score: "Titan",
+      text: "Punchy boi"
+    },
+    {
+      score: "Hunter",
+      text: "Knife to meet you"
+    },
+    {
+      score: "Warlock",
+      text: "Open palm slaps"
+    }
+  ]
+}
+];
