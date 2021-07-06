@@ -105,8 +105,8 @@ function choiceButtonsHandler() {
   const buttons = document.querySelector(".choices .btn");
   // Onclick event listener to every element with the class of .choices
   for (const btn of buttons) {
-    // When an element with .choices is clicked, run the function called buttonClicked
-    btn.onclick = buttonClicked;
+    // When an element with .choices is clicked, run the function called optionButtonClicked
+    btn.onclick = optionButtonClicked;
   }
 }
 
@@ -129,22 +129,21 @@ function updateQuestion() {
   });
 }
 
-// Define what buttonClicked does
-function buttonClicked(e) {
-    var target = e.target; // 1. `this` is parent, need target
-    console.log(target);
+// Define what optionButtonClicked does
+function optionButtonClicked(e) {
+    var target = e.target; 
+    console.log(" target is", target);
     // Get the current element's data-score value
-    var selectedType = target.dataset.score;   // 2. score is the value
-    // Increase the selected answer's 'type' by 1
-    console.log(selectedType);
-    answerData[selectedType]++;  // 4. after change of structure
-    // Hide the current question div
-    this.parentElement.style.display = "none";
-    // Work out what the next question div is
-    var nextQuestion = this.parentElement.dataset.next;
-    // Display the next question element
-    document.getElementById(nextQuestion).style.display = "block";
-    if (nextQuestion === 'result') endQuiz()
+    const selectedType = target.dataset.score; // score is the value
+    // increase the selected answer's charater class 'type' by 1
+    console.log("selectedType is ", selectedType);
+    answerData[selectedType]++;
+    currentQuestion++;
+    if (currentQuestion === questions.length) {
+      endQuiz();
+      return;
+    }
+    updateQuestion();
   }
   
   function endQuiz() {
