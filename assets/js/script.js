@@ -87,16 +87,30 @@ window.onload = function() {
 
 /* Quiz */
 
-// Create a listener for clicks on the 'start the quiz' button on the front page. 
+// Event listener for clicks on the 'start the quiz' button. 
 document.getElementById("beginquiz").addEventListener("click", startQuiz);
 
-// When the button is clicked the 'intro' div is hidden and the first question div is displayed
+let currentQuestion = 0;
+
+// When the button is clicked the 'intro' div is hidden and the question div is displayed
 function startQuiz () {
     document.getElementById("intro").style.display = "none";
     document.getElementById("q1").style.display = "block";
+    choiceButtons();
+    updateQuestion();
 }
 
-// Create an array object to store all the quiz answers. Each selected answer should increase the category score by 1. The highest score will be the personality 'type' in the results. 
+function choiceButtons() {
+  // Get all of the .choices elements
+  const buttons = document.querySelector(".choices .btn");
+  // Onclick event listener to every element with the class of .choices
+  for (const btn of buttons) {
+    // When an element with .choices is clicked, run the function called buttonClicked
+    btn.onclick = buttonClicked;
+  }
+}
+
+// Create an array object to store all the quiz answers. Each selected answer should increase the category score by 1. The highest score will be the character 'type' in the results. 
 const answerData = { // one object, with names as keys, scores as values
     Warlock: 0,
     Hunter: 0,
