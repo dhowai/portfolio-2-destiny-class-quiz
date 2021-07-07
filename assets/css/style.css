@@ -294,7 +294,6 @@ footer {
 
 .choices {
     display: flex;
-    flex-direction: column;
     gap: 10px;
     margin: 20px 0;
 }
@@ -306,6 +305,7 @@ footer {
     padding: 10px;
     color: white;
     outline: none;
+    width: 50%;
 }
 
 .btn:hover {
