@@ -90,12 +90,14 @@ window.onload = function() {
 // Event listener for clicks on the 'start the quiz' button. 
 document.getElementById("beginquiz").addEventListener("click", startQuiz);
 
-let currentQuestion = 0;
+let currentQuestion, shuffledQuestions;
 
 // When the button is clicked the 'intro' div is hidden and the question div is displayed
 function startQuiz() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("question").style.display = "block";
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    currentQuestion = 0;
     choiceButtonsHandler();
     updateQuestion();
 }
@@ -118,7 +120,7 @@ const answerData = { // one object, with names as keys, scores as values
 };
 
 function updateQuestion() {
-  const currentQuestionObj = questions[currentQuestion];
+  const currentQuestionObj = (shuffledQuestions[currentQuestion]);
   const questionDiv = document.getElementById("question");
   questionDiv.querySelector(".question-title").innerHTML = "Question" + (currentQuestion + 1).toString() + ":";
   questionDiv.querySelector(".question-text").innerHTML = currentQuestionObj.question;
