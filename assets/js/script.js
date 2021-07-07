@@ -90,6 +90,7 @@ window.onload = function() {
 
 // Event listener for clicks on the 'start the quiz' button. 
 document.getElementById("beginquiz").addEventListener("click", startQuiz);
+const beginQuiz = document.getElementById("beginquiz");
 
 let currentQuestion, shuffledQuestions;
 
@@ -145,7 +146,7 @@ function optionButtonClicked(e) {
     if (currentQuestion === questions.length) {
       endQuiz();
       return;
-    }
+    } 
     updateQuestion();
   }
   
@@ -161,6 +162,21 @@ function optionButtonClicked(e) {
     if (myTypes.length === 1) result = "You are a " + myTypes[0];
     else result = "You could either be a " + myTypes.join(" or a ");
     document.querySelector("#result .resultText").innerHTML = result + "."
+
+  }
+
+  function restart() {
+      beginQuiz.innerText = "Restart";
+      document.getElementById("intro").style.display = "block";
+      document.getElementById("result").style.display = "none";
+      document.getElementById("question").style.display = "block";
+      currentQuestion = 0;
+      answerData = {
+        Warlock: 0,
+        Hunter: 0,
+        Titan: 0
+      };
+      updateQuestion();
   }
 
   // ---- Questions and Choices ---- //
