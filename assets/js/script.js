@@ -1,3 +1,5 @@
+document.addEventListener("DomContentLoaded");
+
 /* Login */
 
 function openLogin() {
