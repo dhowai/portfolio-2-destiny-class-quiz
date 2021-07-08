@@ -151,6 +151,36 @@ body {
     font-size: xx-large;
 }
 
+.intro-containter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-img {
+    flex-basis: 20%;
+}
+
+.intro-text {
+    flex-basis: 50%;
+    color: white;
+}
+
+.quiz-btn {
+    position: absolute;
+    left: 15%;
+    background-color: #555;
+    color: white;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.quiz-btn:hover {
+    background-color: black;
+}
+
 .charater-class {
     background: chocolate;
     /*margin: 20px;*/
@@ -273,7 +303,7 @@ footer {
 
 #quiz-container {
     width: 80%;
-    border: 1pz grey solid;
+    border: 1px grey solid;
     margin: auto;
     padding: 10px;
     border-radius: 10px;
