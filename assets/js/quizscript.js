@@ -27,7 +27,7 @@ function choiceButtonsHandler() {
 }
 
 // Create an array object to store all the quiz answers. Each selected answer should increase the category score by 1. The highest score will be the character 'type' in the results. 
-const answerData = { // one object, with names as keys, scores as values
+let answerData = { // one object, with names as keys, scores as values
     Warlock: 0,
     Hunter: 0,
     Titan: 0
@@ -36,7 +36,7 @@ const answerData = { // one object, with names as keys, scores as values
 function updateQuestion() {
   const currentQuestionObj = (shuffledQuestions[currentQuestion]);
   const questionDiv = document.getElementById("question");
-  questionDiv.querySelector(".question-title").innerHTML = "Question" + (currentQuestion + 1).toString() + ":";
+  questionDiv.querySelector(".question-title").innerHTML = "Question " + (currentQuestion + 1).toString() + ":";
   questionDiv.querySelector(".question-text").innerHTML = currentQuestionObj.question;
   const choiceButtons = questionDiv.querySelector(".choices").querySelectorAll(".btn");
   choiceButtons.forEach((btn, index) => {
@@ -74,14 +74,12 @@ function optionButtonClicked(e) {
     if (myTypes.length === 1) result = "You are a " + myTypes[0];
     else result = "You could either be a " + myTypes.join(" or a ");
     document.querySelector("#result .resultText").innerHTML = result + "."
-
   }
 
   function restart() {
       beginQuiz.innerText = "Restart";
       document.getElementById("intro").style.display = "block";
       document.getElementById("result").style.display = "none";
-      document.getElementById("question").style.display = "block";
       currentQuestion = 0;
       answerData = {
         Warlock: 0,
