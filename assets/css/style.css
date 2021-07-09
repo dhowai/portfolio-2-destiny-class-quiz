@@ -14,7 +14,7 @@ h1, h2, h3 {
 
 body {
     font-family: Overpass, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     color: black;
     letter-spacing: 2px;
     background-color: #051652;
@@ -312,11 +312,12 @@ footer {
 
 #quiz-container {
     width: 80%;
+    height: 100%;
     border: 1px grey solid;
     margin: auto;
     padding: 10px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #0090b8;
     box-shadow: 0 0 30px 5px;
     display: grid;
 }
@@ -331,45 +332,54 @@ footer {
     display: none;
 }
 
+#question {
+    text-align: center;
+}
+
 .choices {
     display: flex;
     gap: 10px;
     margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn {
-    border: 2px solid;
-    background-color: grey;
+    border: 2px solid black;
+    background-color: #0067a4;
     border-radius: 20px;
     padding: 10px;
     color: white;
-    outline: none;
-    width: 50%;
+    width: 30%;
+    font-weight: 600;
 }
 
 .btn:hover {
-    border-color: black;
+    border-color: white;
+    color: #051652;
 }
 
 #intro, .question, #result {
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 #beginquiz {
-    border: 1px solid;
-    border-radius: 3px;
-    background-color: #eee;
-    text-align: center;
-    line-height: 2em;
-    padding: 0.5em;
-    margin: 0.5em;
+    border: 1px solid black;
+    border-radius: 5px;
+    line-height: 30px;
+    padding: 10px;
     width: 20em;
-    margin: 0 auto;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: #0067A4;
+    color: white;
 }
+
 #beginquiz:hover {
-    color: #bfbfbf;
-    background-color: #555;
+    opacity: 1;
+    background-color: #051652;
 }
 
 
