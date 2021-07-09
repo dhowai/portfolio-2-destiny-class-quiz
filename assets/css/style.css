@@ -169,6 +169,7 @@ body {
 
 .intro-text {
     flex-basis: 50%;
+    padding-bottom: 50px;
 }
 
 .quiz-btn {
@@ -385,15 +386,86 @@ footer {
 
 /* media Queries */
 
+/* For screens size from 1210px wide and down */
+
+@media screen and (max-width: 1210px) {
+    .intro-text {
+        flex-basis: 70%;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    .img-col {
+        flex-basis: 30%;
+    }
+
+    .text-col {
+        flex-basis: 70%;
+    }
+}
+
+/* For screens size from 800px wide and down */
+
+@media screen and (max-width: 800px) {
+
+    .hero-text {
+        font-size: x-large;
+        top: 70%;
+    }
+
+    .intro-img {
+        flex-basis: 30%;
+    }
+    
+    .container1 {
+        display: block;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .container2 {
+        display: block;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        padding-bottom: 20px;
+    } 
+
+    .img-col img {
+        max-width: 50%;
+    }
+}
+
+/* For screens size from 600px wide and down */
+
 @media screen and (max-width: 600px) {
+
+    p {
+        font-size: small;
+    }
+
+    .intro-containter {
+        display: block;
+    }
+
+    .intro-img {
+        text-align: center;
+    }
+
+    .intro-img img {
+        max-width: 50%;
+    }
+
     .nav a:not(:first-child) {display: none;}
     .nav a.icon {
         float: right;
         display: block;
     }
-}
 
-@media screen and (max-width: 600px) {
     .nav.responsive {position: relative;}
     .nav.responsive .icon {
         position: absolute;
@@ -405,4 +477,6 @@ footer {
         display: block;
         text-align: center
     }
+
 }
+
