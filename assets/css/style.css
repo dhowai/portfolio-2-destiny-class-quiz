@@ -8,6 +8,10 @@
     border: none;
 }
 
+h1, h2, h3 {
+    color: white;
+}
+
 body {
     font-family: Overpass, sans-serif;
     font-weight: 400;
@@ -114,7 +118,7 @@ body {
 .nav a {
     float: left;
     display: block;
-    color: #0090B8;
+    color: #00B9BC;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -123,8 +127,8 @@ body {
 }
 
 .nav a:hover {
-    background-color: #00E1B5;
-    color: black;
+  
+    color: #00E1B5;
 }
 
 .nav a.active {
@@ -138,7 +142,7 @@ body {
 /* Home page */
 
 #hero-image {
-    background: url(../images/imgbin_destiny-2-computer-mouse-computer-keyboard-mouse-mats-razer-inc-png.png) center no-repeat #0090B8;
+    background: url(../images/imgbin_destiny-2-computer-mouse-computer-keyboard-mouse-mats-razer-inc-png.png) center no-repeat #0067A4;
     height: 100%;
     position: relative;
 }
@@ -147,7 +151,6 @@ body {
     text-align: center;
     position: relative;
     top: 20%;
-    color: white;
     font-size: xx-large;
 }
 
@@ -156,6 +159,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    border: 10px solid;
+    background-color: #0090B8;
 }
 
 .intro-img {
@@ -164,13 +169,11 @@ body {
 
 .intro-text {
     flex-basis: 50%;
-    color: white;
 }
 
 .quiz-btn {
     position: absolute;
-    left: 15%;
-    background-color: #555;
+    background-color: #0067A4 ;
     color: white;
     padding: 12px 24px;
     cursor: pointer;
@@ -179,14 +182,16 @@ body {
 }
 
 .quiz-btn:hover {
-    background-color: black;
+    opacity: 1;
+    background-color: #051652;
 }
 
 .charater-class {
-    background: chocolate;
-    /*margin: 20px;*/
     text-align: center;
     padding: 10px;
+    border-right: 20px solid;
+    border-left: 20px solid;
+    background-color: #00B9BC;
 }
 
 .container1 {
@@ -222,11 +227,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 5px;
+    margin-right: 18px;
 }
 
 .footer-btn {
-    background-color: green;
+    background-color: #0067A4;
     color: white;
     padding: 16px 20px;
     cursor: pointer;
