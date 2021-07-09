@@ -92,14 +92,14 @@ function optionButtonClicked(e) {
   // ---- Questions and Choices ---- //
 
   const questions = [{
-    question: "How would you prefer to get around?",
+    question: "How would you prefer manoeuvre around the world?",
     options: [{
       score: "Hunter",
-      text: "Double Jump"
+      text: "Multiple Jumps"
     },
     {
       score: "Warlock",
-      text: "Float"
+      text: "Float around"
     },
     {
       score: "Titan",
@@ -111,15 +111,15 @@ function optionButtonClicked(e) {
   question: "What ability would you choose?",
   options: [{
       score: "Titan",
-      text: "Barricade"
+      text: "Barricade, Personal sheild protects user from projectiles"
     },
     {
       score: "Warlock",
-      text: "Rift"
+      text: "Rift, Summons a healing or empowering well of light around the user"
     },
     {
       score: "Hunter",
-      text: "Dodge"
+      text: "Dodge, Easily get away from dangerous situations"
     }
   ]
 },
@@ -127,63 +127,79 @@ function optionButtonClicked(e) {
   question: "What title appeals to you?",
   options: [{
       score: "Warlock",
-      text: "Space magician"
+      text: "Space Magician"
     },
     {
       score: "Titan",
-      text: "Absolute tank/unit"
+      text: "Master Chief knockoff"
     },
     {
       score: "Hunter",
-      text: "Stealth gunslinger"
+      text: "A Lone Wolf"
     }
   ]
 },
 {
-  question: "Arc What super/alt sounds interesting to you?",
+  question: "If you harnessed the power of electricity, what power would you want?",
   options: [{
       score: "Hunter",
-      text: "Staff wielder"
+      text: "Arc staff, conjure a staff powered by arc light, and run around hitting things with it"
     },
     {
       score: "Titan",
-      text: "Thunder fists"
+      text: "Fists of Havoc, supercharges your fists and slam the ground with the force of a maelstrom"
     },
     {
       score: "Warlock",
-      text: "Electric beam/fingers"
+      text: "Stormcaller, allows the user to float across the battlefield, electrocuting and disintegreating foe after foe"
     }
   ]
 },
 {
-  question: "Solar What super/alt sounds interesting to you?",
+  question: "If you harnessed the power of the Sun, what power would you want?",
   options: [{
       score: "Titan",
-      text: "Hammer time"
+      text: "Hammer of Sol, activate to hurl flaming hammer projectiles at enemies, dealing significant damage with each hit "
     },
     {
       score: "Warlock",
-      text: "Flame blade"
+      text: "Daybreak, weave Solar Light into blades and smite your foes from the skies"
     },
     {
       score: "Hunter",
-      text: "Golden gun"
+      text: "Golden Gun, summons a flaming pistol that disintegrates enemies with Solar Light"
     }
   ]
 },
 {
-  question: "Void What super/alt sounds interesting to you?",
+  question: "If you harnessed the power of the Void, what power would you want?",
   options: [{
       score: "Warlock",
-      text: "Space energy ball"
+      text: "Nova Bomb, hurl an explosive bolt of Void Light at the enemy, disintegrating those caught within its blast"
     },
     {
       score: "Hunter",
-      text: "Elusive archer"
+      text: "Shadowshot, fires a non-lethal Void Anchor that slows affected enemies, causes them to take more damage, and prevents them from using abilities"
     },
     {
       score: "Titan",
-      text: "Shield defence"
+      text: "Sentinel Sheild, summon a shield of Void Light, Captain America style"
+    }
+  ]
+},
+{
+  question: "If you harnessed the power of Stasis, what power would you want?",
+  options: [{
+      score: "Titan",
+      text: "Glacial Quake, summons a gauntlet which the user slams into the ground, creating shockwaves that form Stasis crystals, freezing nearby enemies"
+    },
+    {
+      score: "Hunter",
+      text: "Silence and Squal, uses a pair of Kama blades that create a storm that tracks, slows, and damages enemies caught in its radius"
+    },
+    {
+      score: "Warlock",
+      text: "Winter's Wrath, fires projectiles that instantly freeze opponents, before raising their staff and detonating the crystal to send out a Shatter Shockwave that obliterates frozen enemies"
     }
   ]
 },
@@ -191,20 +207,36 @@ function optionButtonClicked(e) {
   question: "What play style appeals to you?",
   options: [{
       score: "Titan",
-      text: "Tank"
+      text: "Aggressive - Dives headfirst into battle"
     },
     {
       score: "Hunter",
-      text: "Mobility"
+      text: "Defensive - attacks at a distance"
     },
     {
       score: "Warlock",
-      text: "Ability"
+      text: "Support - Heals and empowers allies"
     }
   ]
 },
 {
-  question: "Melee preference?",
+  question: "What weapon type would you prefer to use?",
+  options: [{
+      score: "Titan",
+      text: "Shoguns"
+    },
+    {
+      score: "Hunter",
+      text: "Snipers"
+    },
+    {
+      score: "Warlock",
+      text: "Fusion Rifles"
+    }
+  ]
+},
+{
+  question: "What would be your melee preference?",
   options: [{
       score: "Titan",
       text: "Punchy boi"

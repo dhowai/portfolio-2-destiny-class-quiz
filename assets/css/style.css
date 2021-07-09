@@ -355,8 +355,8 @@ footer {
 }
 
 .btn:hover {
-    border-color: white;
-    color: #051652;
+    border-color: #00E1B5;
+    background-color: #051652;
 }
 
 #intro, .question, #result {
