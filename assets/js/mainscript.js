@@ -10,6 +10,18 @@ function navFunction() {
     }
 }
 
+/* Home Page */
+
+const h1 = document.querySelector('h1')
+
+function nameDisplayCheck() {
+  if (localStorage.getItem("user")) {
+    let user = localStorage.getItem("user");
+    h1.textContent = `Which Guardian Will You Be${user}?`;
+  }
+}
+
+document.body.onload = nameDisplayCheck;
 /* Footer */
 
 // Get the modal (make 1 modal/hide 1 element)

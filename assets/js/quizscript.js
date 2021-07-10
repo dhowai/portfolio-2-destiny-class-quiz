@@ -74,12 +74,13 @@ function optionButtonClicked(e) {
     if (myTypes.length === 1) result = "You are a " + myTypes[0];
     else result = "You could either be a " + myTypes.join(" or a ");
     document.querySelector("#result .resultText").innerHTML = result + "."
+    restart();
   }
 
   function restart() {
       beginQuiz.innerText = "Restart";
       document.getElementById("intro").style.display = "block";
-      document.getElementById("result").style.display = "none";
+      document.getElementById("result").style.display = "block";
       currentQuestion = 0;
       answerData = {
         Warlock: 0,
