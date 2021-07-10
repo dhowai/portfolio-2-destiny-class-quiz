@@ -313,7 +313,7 @@ footer {
 
 #quiz-container {
     width: 80%;
-    height: 100%;
+    height: 120%;
     border: 1px grey solid;
     margin: auto;
     padding: 10px;
@@ -361,8 +361,7 @@ footer {
 }
 
 #intro, .question, #result {
-    max-width: 600px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     text-align: center;
 }
 
@@ -381,6 +380,15 @@ footer {
 #beginquiz:hover {
     opacity: 1;
     background-color: #051652;
+}
+
+.result-image {
+    display: flex;
+    padding-top: 40px;
+}
+
+.result-image img {
+    width: 50%;
 }
 
 
