@@ -30,7 +30,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: url('../images/destiny-destiny-2-warlock-hunter-titan-traveller.jpg') center bottom / cover no-repeat;
+    background: url('../images/pages/destiny-destiny-2-warlock-hunter-titan-traveller.jpg') center bottom / cover no-repeat;
 }
 
 @keyframes fadeIn {
@@ -141,7 +141,7 @@ body {
 /* Home page */
 
 #hero-image {
-    background: url(../images/imgbin_destiny-2-computer-mouse-computer-keyboard-mouse-mats-razer-inc-png.png) center no-repeat #0067A4;
+    background: url('../images/pages/imgbin_destiny-2-computer-mouse-computer-keyboard-mouse-mats-razer-inc-png.png') center no-repeat #0067A4;
     height: 100%;
     position: relative;
 }

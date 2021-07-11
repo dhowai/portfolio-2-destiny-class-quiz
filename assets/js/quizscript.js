@@ -80,7 +80,7 @@ function optionButtonClicked(e) {
     if (t === "Warlock")  src = 'warlock.jpg';
     else if (t === "Titan") src = 'titan.jpg';
     else if (t === "Hunter") src = 'hunter.jpg';
-    if (src) document.querySelector(".result-image").innerHTML += `<img src="assets/images/${t}2.png" />`
+    if (src) document.querySelector(".result-image").innerHTML += `<img src="assets/images/pages/${t}2.png" />`
   })
   
   }
