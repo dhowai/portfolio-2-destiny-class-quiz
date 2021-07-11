@@ -15,27 +15,34 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Destiny 2 Class Quiz</title>
 </head>
-<body>
-    <div id="landing-page">
-        <h1 id="landing-text">Welcome Guardian</h1>
-        <button class="open-login-button" onclick="openLogin()">Let's Begin</button>
+<body id="landing-page">
+    <h1 id="landing-text">Welcome Guardian</h1>
+    <button id="loginBtn">Let's Begin</button>
+    <div id="loginModal" class="login-modal">  
+        <div class="login-content">
+            <div class="login-header">
+                <span class="close">&times;</span>
+                <h2>Login Here</h2>
+            </div>
+            <div class="login-body">
+                <form action="home.html">
+                    <div class="remember">
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" id="email" placeholder="Enter Email" name="email" required>
     
-        <div class="login-popup" id="login">
-            <form action="home.html" class="login-container">
-                <h1>Login</h1>
-                <div class="remember">
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
-
-                    <label for="username"><b>Username</b></label>
-                    <input type="text" id="user" placeholder="Enter Username" name="username" required>
-
-                    <button type="submit" value="Login" id="submitForm" class="btn">Login</button>
-                    <button type="button" class="btn cancel" onclick="closeLogin()">Close</button>
-                </div>
-            </form>
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" id="user" placeholder="Enter Username" name="username" required>
+    
+                        <button type="submit" value="Login" id="submitForm" class="login-btn">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="login-footer">
+                <h3>Something bugie</h3>
+            </div>
         </div>
-</div>
+    </div>
+
 <script src="assets/js/loginscript.js"></script>
 </body>
 </html>
