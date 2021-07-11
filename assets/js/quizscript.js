@@ -65,6 +65,7 @@ function optionButtonClicked(e) {
   function endQuiz() {
     console.log("Scores were ", answerData);
     document.getElementById("question").style.display = "none";
+    document.getElementById("quiz-img").style.display = "none";
     document.getElementById("result").style.display = "block";
     // Sort the scores in descending order and check the top 2 character types
     const sortedScores = Object.entries(answerData).sort((type1, type2) => type2[1] - type1[1]);

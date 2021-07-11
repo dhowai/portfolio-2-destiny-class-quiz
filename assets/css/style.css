@@ -141,7 +141,7 @@ body {
 /* Home page */
 
 #hero-image {
-    background: url('../images/pages/imgbin_destiny-2-computer-mouse-computer-keyboard-mouse-mats-razer-inc-png.png') center no-repeat #0067A4;
+    background: url('../images/pages/imgbin_destiny-jigsaw-puzzles-puzzle-video-game-png.png') center no-repeat #0067A4;
     height: 100%;
     position: relative;
 }
@@ -310,9 +310,8 @@ footer {
 
 /* Quiz */
 
-#quiz-container {
+.quiz-container {
     width: 80%;
-    height: 120%;
     border: 1px grey solid;
     margin: auto;
     padding: 10px;
@@ -322,10 +321,10 @@ footer {
     display: grid;
 }
 
-#quiz-container img {
+.quiz-container img {
     display: block;
-    margin: auto;
-    width: 35%;
+    margin: 0 auto;
+    width: 40%;
 }
 
 .question, #result {
@@ -387,7 +386,7 @@ footer {
 }
 
 .result-image img {
-    width: 50%;
+    width: 30%;
 }
 
 
