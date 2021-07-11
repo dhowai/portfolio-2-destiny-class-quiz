@@ -59,7 +59,7 @@ body {
 
 .login-content {
     position: relative;
-    background: url('../images/pages/destiny-2-video-games-hunter-titan-wallpaper.jpg') center bottom / cover no-repeat;
+    background: url('../images/pages/destiny-2-video-games-hunter-titan-wallpaper.jpg') center top / cover no-repeat;
     margin: 0 auto;
     width: 50%;
     animation-name: animatetop;
