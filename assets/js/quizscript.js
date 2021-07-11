@@ -28,9 +28,9 @@ function choiceButtonsHandler() {
 
 // Create an array object to store all the quiz answers. Each selected answer should increase the category score by 1. The highest score will be the character 'type' in the results. 
 let answerData = { // one object, with names as keys, scores as values
-    Warlock: 0,
-    Hunter: 0,
-    Titan: 0
+    warlock: 0,
+    hunter: 0,
+    titan: 0
 };
 
 function updateQuestion() {
@@ -78,9 +78,9 @@ function optionButtonClicked(e) {
     document.querySelector(".result-image").innerHTML=''; // clear it out
     myTypes.forEach(t => {
     let src=''
-    if (t === "Warlock")  src = 'warlock.jpg';
-    else if (t === "Titan") src = 'titan.jpg';
-    else if (t === "Hunter") src = 'hunter.jpg';
+    if (t === "warlock")  src = 'warlock.jpg';
+    else if (t === "titan") src = 'titan.jpg';
+    else if (t === "hunter") src = 'hunter.jpg';
     if (src) document.querySelector(".result-image").innerHTML += `<img src="assets/images/pages/${t}2.png" />`
   })
   
@@ -104,15 +104,15 @@ function optionButtonClicked(e) {
   const questions = [{
     question: "How would you prefer manoeuvre around the world?",
     options: [{
-      score: "Hunter",
+      score: "hunter",
       text: "Multiple Jumps"
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Float around"
     },
     {
-      score: "Titan",
+      score: "titan",
       text: "Jetpack"
     }
   ]
@@ -120,15 +120,15 @@ function optionButtonClicked(e) {
 {
   question: "What ability would you choose?",
   options: [{
-      score: "Titan",
+      score: "titan",
       text: "Barricade, Personal sheild protects user from projectiles"
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Rift, Summons a healing or empowering well of light around the user"
     },
     {
-      score: "Hunter",
+      score: "hunter",
       text: "Dodge, Easily get away from dangerous situations"
     }
   ]
@@ -136,15 +136,15 @@ function optionButtonClicked(e) {
 {
   question: "What title appeals to you?",
   options: [{
-      score: "Warlock",
+      score: "warlock",
       text: "Space Magician"
     },
     {
-      score: "Titan",
-      text: "Master Chief knockoff"
+      score: "titan",
+      text: "Master Chief Clone"
     },
     {
-      score: "Hunter",
+      score: "hunter",
       text: "A Lone Wolf"
     }
   ]
@@ -152,15 +152,15 @@ function optionButtonClicked(e) {
 {
   question: "If you harnessed the power of electricity, what power would you want?",
   options: [{
-      score: "Hunter",
+      score: "hunter",
       text: "Arc staff, conjure a staff powered by arc light, and run around hitting things with it"
     },
     {
-      score: "Titan",
+      score: "titan",
       text: "Fists of Havoc, supercharges your fists and slam the ground with the force of a maelstrom"
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Stormcaller, allows the user to float across the battlefield, electrocuting and disintegreating foe after foe"
     }
   ]
@@ -168,15 +168,15 @@ function optionButtonClicked(e) {
 {
   question: "If you harnessed the power of the Sun, what power would you want?",
   options: [{
-      score: "Titan",
+      score: "titan",
       text: "Hammer of Sol, activate to hurl flaming hammer projectiles at enemies, dealing significant damage with each hit "
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Daybreak, weave Solar Light into blades and smite your foes from the skies"
     },
     {
-      score: "Hunter",
+      score: "hunter",
       text: "Golden Gun, summons a flaming pistol that disintegrates enemies with Solar Light"
     }
   ]
@@ -184,15 +184,15 @@ function optionButtonClicked(e) {
 {
   question: "If you harnessed the power of the Void, what power would you want?",
   options: [{
-      score: "Warlock",
+      score: "warlock",
       text: "Nova Bomb, hurl an explosive bolt of Void Light at the enemy, disintegrating those caught within its blast"
     },
     {
-      score: "Hunter",
+      score: "hunter",
       text: "Shadowshot, fires a non-lethal Void Anchor that slows affected enemies, causes them to take more damage, and prevents them from using abilities"
     },
     {
-      score: "Titan",
+      score: "titan",
       text: "Sentinel Sheild, summon a shield of Void Light, Captain America style"
     }
   ]
@@ -200,15 +200,15 @@ function optionButtonClicked(e) {
 {
   question: "If you harnessed the power of Stasis, what power would you want?",
   options: [{
-      score: "Titan",
+      score: "titan",
       text: "Glacial Quake, summons a gauntlet which the user slams into the ground, creating shockwaves that form Stasis crystals, freezing nearby enemies"
     },
     {
-      score: "Hunter",
+      score: "hunter",
       text: "Silence and Squal, uses a pair of Kama blades that create a storm that tracks, slows, and damages enemies caught in its radius"
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Winter's Wrath, fires projectiles that instantly freeze opponents, before raising their staff and detonating the crystal to send out a Shatter Shockwave that obliterates frozen enemies"
     }
   ]
@@ -216,15 +216,15 @@ function optionButtonClicked(e) {
 {
   question: "What play style appeals to you?",
   options: [{
-      score: "Titan",
+      score: "titan",
       text: "Aggressive - Dives headfirst into battle"
     },
     {
-      score: "Hunter",
-      text: "Defensive - attacks at a distance"
+      score: "hunter",
+      text: "Defensive - Attacks at a distance"
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Support - Heals and empowers allies"
     }
   ]
@@ -232,31 +232,31 @@ function optionButtonClicked(e) {
 {
   question: "What weapon type would you prefer to use?",
   options: [{
-      score: "Titan",
+      score: "titan",
       text: "Shoguns"
     },
     {
-      score: "Hunter",
+      score: "hunter",
       text: "Snipers"
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Fusion Rifles"
     }
   ]
 },
 {
-  question: "What would be your melee preference?",
+  question: "What would you use in close combat?",
   options: [{
-      score: "Titan",
+      score: "titan",
       text: "Punchy boi"
     },
     {
-      score: "Hunter",
+      score: "hunter",
       text: "Knife to meet you"
     },
     {
-      score: "Warlock",
+      score: "warlock",
       text: "Open palm slaps"
     }
   ]
