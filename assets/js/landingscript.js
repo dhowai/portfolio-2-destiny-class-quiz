@@ -30,8 +30,8 @@ const getName = document.querySelector("#entername");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
 
-const h1 = document.querySelector(".hero-text");
 const h2 = document.querySelector("h2");
+const h3 = document.querySelector("h3");
 forgetMe.style.display = "none";
 
 form.addEventListener("submit", function (e) {
@@ -53,14 +53,14 @@ forgetBtn.addEventListener("click", function () {
 function nameDisplayCheck() {
   if (localStorage.getItem("name")) {
     let name = localStorage.getItem("name");
-    h1.textContent = `Which Guardian Will You be, ${name}?`;
-    h2.textContent = `Welcome to the Destiny 2 Quiz, ${name}!`;
+    h2.textContent = `Which Guardian Will You be, ${name}?`;
+    h3.textContent = `Welcome to the Destiny 2 Quiz, ${name}!`;
 
     forgetMe.style.display = "block";
     rememberMe.style.display = "none";
   } else {
-    h1.textContent = `Which Guardian Will You be?`;
-    h2.textContent = `Welcome to the Destiny 2 Quiz!`;
+    h2.textContent = `Which Guardian Will You be?`;
+    h3.textContent = `Welcome to the Destiny 2 Quiz!`;
 
     forgetMe.style.display = "none";
     rememberMe.style.display = "block";
