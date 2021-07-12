@@ -185,16 +185,16 @@ header {
     padding-right: 20px;
   }
   
-  .user-style {
+  #user-style {
     font-size: 0.8rem;
     color: white;
   }
 
-  .user-style input[type=text] {
+  #user-style input[type=text] {
     padding: 5px;
   }
 
-  .user-style input[type=text]:focus {
+  #user-style input[type=text]:focus {
     background-color: #ddd;
     border-color: black;
   }
