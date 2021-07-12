@@ -452,6 +452,25 @@ img {
         font-size: small;
     }
 
+    header {
+        padding-right: 0;
+        display: block;
+    }
+
+    #landing-text {
+        font-size: 50px;
+    }
+
+    .login-btn {
+        bottom: 25%;
+        font-size: large;
+    }
+
+    #user-style {
+        padding: 5px;
+        text-align: end;
+    }
+
     .intro-containter {
         display: block;
         text-align: center;
@@ -495,6 +514,19 @@ img {
         right: 30%;
     }
 
+    .quiz-container {
+        width: 100%;
+    }
+
+    .footer-btn {
+        padding: 5px 10px;
+    }
+
+    #footer {
+        justify-content: center;
+        align-items: initial;
+        margin-right: 0;
+    }
 
 }
 
