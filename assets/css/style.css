@@ -24,19 +24,20 @@ body {
 
 /* Index/landing page */
 
-#landing-page {
+.landing-page {
     animation: fadeIn 5s;
     display: flex;
     justify-content: center;
     align-items: center;
     background: url('../images/pages/destiny-destiny-2-warlock-hunter-titan-traveller.jpg') center bottom / cover no-repeat;
+    height: 100%;
 }
 
 @keyframes fadeIn {
     0% {opacity: 2%;}
 }
 
-#landing-text {
+.landing-text {
     font-size: 80px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -262,7 +263,7 @@ img {
 
 /* footer */
 
-footer {
+#footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;

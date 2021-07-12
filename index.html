@@ -11,38 +11,107 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_eMO4nwkcguskMvgVTEYV1");
+        })();
+    </script>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Destiny 2 Class Quiz</title>
 </head>
-<body id="landing-page">
-    <h1 id="landing-text">Welcome Guardian</h1>
+<body>
+    <div id="landingpage" class="landing-page">
+        <h1 id="landing-text">Welcome Guardian</h1>
     <button id="loginBtn">Let's Begin</button>
-    <div id="loginModal" class="login-modal">  
-        <div class="login-content">
-            <div class="login-header">
-                <span class="close">&times;</span>
-                <h2>Login Here</h2>
-            </div>
-            <div class="login-body">
-                <form action="home.html">
-                    <div class="remember">
-                        <label for="email"><b>Email</b></label>
-                        <input type="text" id="email" placeholder="Enter Email" name="email" required>
+    </div>
     
-                        <label for="username"><b>Username</b></label>
-                        <input type="text" id="user" placeholder="Enter Username" name="username" required>
-    
-                        <button type="submit" value="Login" id="submitForm" class="login-btn">Login</button>
-                    </div>
-                </form>
+    <header>
+        <nav class="nav" id="mainNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="javascript:void(0)" class="icon" onclick="navFunction()"><i class="fas fa-bars"></i></a>
+        </nav>
+    </header>
+    <section id="hero-image">
+        <div class="hero-text">
+            <h1>Which Guardian Will You be?</h1>
+        </div>
+    </section>
+    <section id="introd">
+        <div class= "intro-containter">
+            <div class="intro-text">
+                <h2>Welcome to the Destiny 2 Quiz</h2>
+                <p>Destiny 2 is a online multiplayer first person shooter video game developed by Bungie. Players assume the role of a Guardian, protectors of Earth's last safe city as they weild a power called Light to protect humanity. There are 3 types of Guardian and this site helps the player decide which class to play as. Take the short quiz here or read more about the classes blow. Enjoy!</p>
+                <a class="quiz-btn" href="quiz.html">Quiz Here</a>
             </div>
-            <div class="login-footer">
-                <h3>Something Bungie</h3>
+            <div class="intro-img">
+                <img src="assets/images/pages/imgbin_destiny-2-forsaken-bungie-video-game-chibi-png.png" alt="">
             </div>
         </div>
-    </div>
-
-<script src="assets/js/loginscript.js"></script>
+    </section>
+    <section class="charater-class" id="charater-class">
+        <h2>Guardian Classes</h2>
+        <div class="container1">
+            <div class="img-col">
+                <img src="assets/images/pages/warlock.png" alt="">
+            </div>
+            <div class="text-col">
+                <h3>Warlock</h3>
+                <p>They have long studied the traveler, mastering some of its arcane energies. Its true purpose still remains a great mystery, but discovering truth has drven them into the unknown. Now, our enemies are the only thing that stands between you and the lost wonders of our Golden Age. Any foes attempting to stand in your way will prove no match for your powerful magic attacks.</p>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="img-col">
+                <img src="assets/images/pages/hunter.png" alt="">
+            </div>
+            <div class="text-col">
+                <h3>Hunter</h3>
+                <p>They once prowled the wilderness and wastelands, taking big risks for even bigger rewards. You're no outlaw-at least, not anymore-but making your own luck has always meant bending the rules. Your unique brand of daring and ingenuity is needed now more than ever. While they may seem to only be long range experts, the hunter excels in silent close combat with their dagger.</p>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="img-col">
+                <img src="assets/images/pages/titan.png" alt="">
+            </div>
+            <div class="text-col">
+                <h3>Titan</h3>
+                <p>They built the wall, and gave their lives to defend it. Now, you stand in the same high place, steadfast and sure, protecting all those who shelter in your shadow. Our enemies may be deadly and merciless, but so are you. You're a tank of a soldier who can wield any weapon, but also protect any friend.</p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <button id="aboutBtn" class="footer-btn">About</button>
+        <button id="contactBtn" class="footer-btn">Contact</button>
+        <a href="https://www.bungie.net/" class="footer-btn" target="_blank" rel="noopener" aria-label="Visit the Destiny 2 website (opens in a new tab)"><i class="fas fa-gamepad"></i></a>
+        <a href="https://www.reddit.com/r/destiny2/" class="footer-btn" target="_blank" rel="noopener" aria-label="Visit the sub reddit page (opens in a new tab)"><i class="fab fa-reddit"></i></a>
+        <a href="https://www.youtube.com/channel/UC52XYgEExV9VG6Rt-6vnzVA" class="footer-btn" target="_blank" rel="noopener" aria-label="Visit the Youtube page (opens in a new tab)"><i class="fab fa-youtube"></i></a>
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>This is Website that offers an inside to the class/character selection for the Destiny 2 the game. With the help of a specially designed quiz, you will find out the class best for you in a matter of minutes</p>
+            </div>
+        </div>
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form class="contact-form" id="contact-form" method="POST">
+                    
+                    <label for="fname">Name:</label>
+                    <input type="text" name="user_name" id="fname" placeholder="Enter Name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" name="user_email" id="email" placeholder="Enter Email" required>
+                
+                    <label for="subject">Message:</label>
+                    <textarea name="message" id="subject" placeholder="Enter Text Here" style="height: 200px;" required></textarea>
+    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/mainscript.js"></script>
 </body>
 </html>

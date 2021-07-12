@@ -1,3 +1,22 @@
+/* Landing Page */
+document.getElementById("landingpage").addEventListener("click", loadHome);
+const landingPage = document.getElementById("landingpage");
+document.getElementById("hero-image").style.display = "none";
+document.getElementById("mainNav").style.display = "none";
+document.getElementById("introd").style.display = "none";
+document.getElementById("charater-class").style.display = "none";
+document.getElementById("charater-class").style.display = "none";
+document.getElementById("footer").style.display = "none";
+
+function loadHome() {
+  document.getElementById("landingpage").style.display = "none";
+  document.getElementById("hero-image").style.display = "block";
+  document.getElementById("mainNav").style.display = "block";
+  document.getElementById("introd").style.display = "block";
+  document.getElementById("charater-class").style.display = "block";
+  document.getElementById("charater-class").style.display = "block";
+  document.getElementById("footer").style.display = "flex";
+}
 
 /* Navigation */
 
