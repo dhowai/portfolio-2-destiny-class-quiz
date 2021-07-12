@@ -37,7 +37,7 @@ body {
     0% {opacity: 2%;}
 }
 
-.landing-text {
+#landing-text {
     font-size: 80px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
