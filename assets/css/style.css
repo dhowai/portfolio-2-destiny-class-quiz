@@ -277,6 +277,7 @@ footer {
     opacity: 0.8;
     border: black solid 2px;
     border-radius: 6px;
+    margin: 0 2px;
 }
 
 .footer-btn:hover {
