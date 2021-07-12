@@ -10,7 +10,7 @@ let currentQuestion, shuffledQuestions;
 function startQuiz() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("question").style.display = "block";
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
     choiceButtonsHandler();
     updateQuestion();
