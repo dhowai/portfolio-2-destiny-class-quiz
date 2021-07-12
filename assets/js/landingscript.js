@@ -1,5 +1,5 @@
 /* Landing Page */
-document.getElementById("loginBtn").addEventListener("click", loadHome)
+document.getElementById("loginbtn").addEventListener("click", loadHome)
 
 document.getElementById("hero-image").style.display = "none";
 document.getElementById("mainNav").style.display = "none";
@@ -18,6 +18,7 @@ function loadHome() {
   document.getElementById("user-style").style.display = "block";
   document.getElementById("footer").style.display = "flex";
 }
+
 
 /* Home Page */
 
