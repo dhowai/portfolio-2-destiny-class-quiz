@@ -74,15 +74,15 @@ function optionButtonClicked(e) {
     let result = '';
     if (myTypes.length === 1) result = "You are a " + myTypes[0];
     else result = "You could either be a " + myTypes.join(" or a ");
-    document.querySelector("#result .result-text").innerHTML = result
+    document.querySelector("#result .result-text").innerHTML = result;
     document.querySelector(".result-image").innerHTML=''; 
     myTypes.forEach(t => {
-    let src=''
+    let src='';
     if (t === "warlock")  src = 'warlock.jpg';
     else if (t === "titan") src = 'titan.jpg';
     else if (t === "hunter") src = 'hunter.jpg';
-    if (src) document.querySelector(".result-image").innerHTML += `<img src="assets/images/pages/${t}.png" />`
-  })
+    if (src) document.querySelector(".result-image").innerHTML += `<img src="assets/images/pages/${t}3.png" />`;
+  });
   
   }
 
