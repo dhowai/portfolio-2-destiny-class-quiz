@@ -178,6 +178,36 @@ body {
     display: none;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  
+  .user-style {
+    font-size: 0.8rem;
+    color: white;
+  }
+
+  .user-style input[type=text] {
+    padding: 5px;
+  }
+
+  .user-style input[type=text]:focus {
+    background-color: #ddd;
+    border-color: black;
+  }
+
+  .name-btn  {
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  .name-btn:hover {
+    opacity: 1;
+  }
+
 /* Home page */
 
 #hero-image {
@@ -191,6 +221,7 @@ body {
     position: relative;
     font-size: xx-large;
     top: 2%;
+    color: white;
 }
 
 .intro-containter {

@@ -17,6 +17,8 @@ function loadHome() {
   document.getElementById("footer").style.display = "flex";
 }
 
+
+
 /* Navigation */
 
 function navFunction() {
@@ -30,16 +32,53 @@ function navFunction() {
 
 /* Home Page */
 
-const h1 = document.querySelector('h1')
+// create needed constants
+const rememberMe = document.querySelector(".remember");
+const forgetMe = document.querySelector(".forget");
+const form = document.querySelector("form");
+const getName = document.querySelector("#entername");
+const submitBtn = document.querySelector("#submitname");
+const forgetBtn = document.querySelector("#forgetname");
+
+const h1 = document.querySelector(".hero-text");
+const h2 = document.querySelector("h2");
+forgetMe.style.display = "none";
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+
+submitBtn.addEventListener("click", function () {
+  localStorage.setItem("name", getName.value);
+
+  nameDisplayCheck();
+});
+
+forgetBtn.addEventListener("click", function () {
+  localStorage.removeItem("name");
+
+  nameDisplayCheck();
+});
 
 function nameDisplayCheck() {
-  if (localStorage.getItem("user")) {
-    let user = localStorage.getItem("user");
-    h1.textContent = `Which Guardian Will You Be${user}?`;
+  if (localStorage.getItem("name")) {
+    let name = localStorage.getItem("name");
+    h1.textContent = `Which Guardian Will You be, ${name}?`;
+    h2.textContent = `Welcome to the Destiny 2 Quiz, ${name}!`;
+
+    forgetMe.style.display = "block";
+    rememberMe.style.display = "none";
+  } else {
+    h1.textContent = `Which Guardian Will You be?`;
+    h2.textContent = `Welcome to the Destiny 2 Quiz!`;
+
+    forgetMe.style.display = "none";
+    rememberMe.style.display = "block";
   }
 }
 
 document.body.onload = nameDisplayCheck;
+
 /* Footer */
 
 // Get the modal (make 1 modal/hide 1 element)
