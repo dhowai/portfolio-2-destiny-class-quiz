@@ -5,7 +5,7 @@ document.getElementById("hero-image").style.display = "none";
 document.getElementById("mainNav").style.display = "none";
 document.getElementById("introd").style.display = "none";
 document.getElementById("charater-class").style.display = "none";
-document.getElementById("user-style").style.display = "none";
+document.getElementById("local-details").style.display = "none";
 document.getElementById("footer").style.display = "none";
 
 function loadHome() {
@@ -15,7 +15,7 @@ function loadHome() {
   document.getElementById("mainNav").style.display = "block";
   document.getElementById("introd").style.display = "block";
   document.getElementById("charater-class").style.display = "block";
-  document.getElementById("user-style").style.display = "block";
+  document.getElementById("local-details").style.display = "block";
   document.getElementById("footer").style.display = "flex";
 }
 
