@@ -103,7 +103,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
     -   The main quiz image is then removed and the results are displayed in the form of a text of what class the user is and an accompanying image of said class.
     -   The restart function then using the start button and changes the text to restart. This wipes all previous data and begins the quiz again.
     ![Quiz with results](https://github.com/dhowai/portfolio-2-destinyquiz/blob/master/assets/images/readme/quiz%20results.png)
-    ![Quiz restart]()
+    ![Quiz restart](https://github.com/dhowai/portfolio-2-destinyquiz/blob/master/assets/images/readme/quiz%20results2.png)
 
 ### Features left to implement
 
