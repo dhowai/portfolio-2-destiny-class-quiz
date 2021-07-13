@@ -235,8 +235,8 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 -   Wireframe software used to design the site structure [Balsamiq](https://balsamiq.com/)
 -   Used [Autodesk sketchBook](https://www.autodesk.com/products/sketchbook/overview) to edit images for the classes taken from the in-game character screen
 -   Used [Imageonline](https://remove-white-background.imageonline.co/) to remove the white backgrounds from the edited images.
--   Used W3schools for instruction on how to:
-    -   How to create a modal box [W3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+-   Used W3schools for instruction on how to create a modal box [W3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+-   Used a tutorial by [R3habMedia](https://www.youtube.com/watch?v=6PsBeh2MgYc&lc=UgxH74MjKV-AUgV1Oy14AaABAg.9PbrxiBMvDA9Pc8OMqmvkA) on youtube for the reference on how to use local storage.
 -   [EmailJS](https://www.emailjs.com/docs/tutorial/overview/) was used for the contact form element in the footer.
 -   The ReadMe file was written in reference to [The Code Institute sample README](https://github.com/Code-Institute-Solutions/SampleREADME),[The Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template), [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 -   [Overstackflow](https://stackoverflow.com/) used to fix the issues with the javascript errors.
