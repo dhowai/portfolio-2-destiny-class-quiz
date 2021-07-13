@@ -372,6 +372,8 @@ body {
 
 .result-text {
     text-transform: capitalize;
+    padding-top: 50px;
+    font-size: x-large;
 }
 
 .result-image {

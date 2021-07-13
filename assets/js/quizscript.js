@@ -8,6 +8,9 @@ let currentQuestion, shuffledQuestions;
 
 // When the button is clicked the 'intro' div is hidden and the question div is displayed
 function startQuiz() {
+    document.querySelector('#result .result-text').innerHTML = ''; // clears the field
+    document.querySelector('.result-image').innerHTML = ''; 
+    document.getElementById('result-header').innerHTML = ''; 
     document.getElementById("intro").style.display = "none";
     document.getElementById("question").style.display = "block";
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles questions 
@@ -27,7 +30,7 @@ function choiceButtonsHandler() {
 }
 
 // Create an array object to store all the quiz answers. Each selected answer should increase the category score by 1. The highest score will be the character 'type' in the results. 
-let answerData = { // one object, with names as keys, scores as values
+var answerData = { // one object, with names as keys, scores as values
     warlock: 0,
     hunter: 0,
     titan: 0
@@ -84,9 +87,21 @@ function optionButtonClicked(e) {
     else if (t === "hunter") src = 'hunter.jpg';
     if (src) document.querySelector(".result-image").innerHTML += `<img src="assets/images/pages/${t}3.png" />`;
   });
-  
+  restart();
 }
 
+function restart() {
+  beginQuiz.innerText = 'Restart';
+  document.getElementById('intro').style.display = 'block';
+  document.getElementById('result').style.display = 'block';
+  currentQuestion = 0;
+  answerData = { 
+    warlock: 0,
+    hunter: 0,
+    titan: 0,
+  };
+  updateQuestion();
+}
   // ---- Questions and Choices ---- //
 
   const questions = [{
