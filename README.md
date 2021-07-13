@@ -2,7 +2,7 @@
 
 This site is for the potential new players for the Bungie first person shooter video game called Destiny 2. In the game you have a choice of picking between three classes of characters and this site is dedicated to showing the new players what the three classes are and through a short quiz, which type of character the user is most likely to enjoy playing as.
 
-![Screen sizes](insert image of diff screen sizes)
+![Screen sizes](https://github.com/dhowai/portfolio-2-destinyquiz/blob/master/assets/images/readme/screen%20size%20image.png)
 
 The live link can be found here - https://dhowai.github.io/portfolio-2-destinyquiz/
 
@@ -110,6 +110,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 -   Store an array of users and scores to local storage an have an option to send the user the results.
 -   Add more pages detailing the game history and ongoing updates since it is a game as a service.
 -   Any user suggested features, e.g. improvement to questions and options or to add more to question pool.
+-   /*Add*/
 
 ## Testing 
 
@@ -143,7 +144,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 -   Quiz page
     -   This page holds the majority of the javascript. Initially all the javascript was located on one page which caused an error of having different evernt listeners waiting to be called due it being on a different page. Therefore, the scripts were split into three, one for the quiz, one for the landing image and the local storage function and lastely one that they share is the mainscript which hold the naviagation function and modal functions for the footer.
     -   The quiz begins when the button is clicked and the questions are chosen at random through the question array, once the last question is answered the points get tallyed bewteen the 3 choices.
-    
+    -   /*Add*/?
 
 
 ### Testing user Stories from User Experience (UX) Section
@@ -206,7 +207,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 
 -   ### Known Bugs
 
--   
+-   /*Finish This*/
 
 ## Deployment
 
@@ -244,6 +245,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 ### Media
 
 -   Photo used for the landing page is from [goodfon](https://www.goodfon.com/wallpaper/destiny-destiny-2-warlock-hunter-titan-traveller.html).
+-   Used [amiresponsive](http://ami.responsivedesign.is/#)
 -   The character class images was taken via screenshots from destiny the video game and editied using the autodesk sketchbook.
 -   The various cartoon images were taken from [Imgbin](https://imgbin.com/).
 
