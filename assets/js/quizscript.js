@@ -12,6 +12,7 @@ function startQuiz() {
     document.querySelector('.result-image').innerHTML = ''; 
     document.getElementById('result-header').innerHTML = ''; 
     document.getElementById("intro").style.display = "none";
+    document.getElementById("quiz-img").style.display = "block";
     document.getElementById("question").style.display = "block";
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles questions 
     currentQuestion = 0;

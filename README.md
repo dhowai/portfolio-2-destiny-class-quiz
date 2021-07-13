@@ -101,7 +101,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 
     -   Once the user reached the end of the questions the endQuiz function is called and the users total scores in answer is are organized in descending order and checks which character classes are the most occurring.
     -   The main quiz image is then removed and the results are displayed in the form of a text of what class the user is and an accompanying image of said class.
-    -   /*restart function*/
+    -   The restart function then using the start button and changes the text to restart. This wipes all previous data and begins the quiz again.
     ![Quiz with results](https://github.com/dhowai/portfolio-2-destinyquiz/blob/master/assets/images/readme/quiz%20results.png)
     ![Quiz restart]()
 
@@ -110,7 +110,6 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 -   Store an array of users and scores to local storage an have an option to send the user the results.
 -   Add more pages detailing the game history and ongoing updates since it is a game as a service.
 -   Any user suggested features, e.g. improvement to questions and options or to add more to question pool.
--   /*Add*/
 
 ## Testing 
 
@@ -144,7 +143,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 -   Quiz page
     -   This page holds the majority of the javascript. Initially all the javascript was located on one page which caused an error of having different evernt listeners waiting to be called due it being on a different page. Therefore, the scripts were split into three, one for the quiz, one for the landing image and the local storage function and lastely one that they share is the mainscript which hold the naviagation function and modal functions for the footer.
     -   The quiz begins when the button is clicked and the questions are chosen at random through the question array, once the last question is answered the points get tallyed bewteen the 3 choices.
-    -   /*Add*/?
+    
 
 
 ### Testing user Stories from User Experience (UX) Section
@@ -207,7 +206,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 
 -   ### Known Bugs
 
--   /*Finish This*/
+-   The landingscript has a bug where if the user were to navigate to the home page, the landing page image appears every time. The user would then need to click the button to gain access to the content.
 
 ## Deployment
 
@@ -219,7 +218,6 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
     -   After a few minutes it will say your site has been published with a link to the site
 
  
-
 ## Credits
 
  ### Languages Used
@@ -241,6 +239,7 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
     -   How to create a modal box [W3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
 -   [EmailJS](https://www.emailjs.com/docs/tutorial/overview/) was used for the contact form element in the footer.
 -   The ReadMe file was written in reference to [The Code Institute sample README](https://github.com/Code-Institute-Solutions/SampleREADME),[The Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template), [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+-   [Overstackflow](https://stackoverflow.com/) used to fix the issues with the javascript errors.
 
 ### Media
 
@@ -251,5 +250,5 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 
 ### Acknowledgement
 
--   The Destiny 2 community from the game and various social media for the inspiration behind the questions.
+-   The Destiny 2 community from in-game and various social media for the inspiration behind the questions.
 -   My mentor for giving constant feedback throughtout the sessions.

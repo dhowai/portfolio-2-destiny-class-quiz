@@ -77,6 +77,10 @@ body {
     text-transform: uppercase;
 }
 
+.login-btn:hover {
+    opacity: 1;
+}
+
 /* Naviagation */
 
 .nav {
