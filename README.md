@@ -142,7 +142,8 @@ The live link can be found here - https://dhowai.github.io/portfolio-2-destinyqu
 
 -   Quiz page
     -   This page holds the majority of the javascript. Initially all the javascript was located on one page which caused an error of having different evernt listeners waiting to be called due it being on a different page. Therefore, the scripts were split into three, one for the quiz, one for the landing image and the local storage function and lastely one that they share is the mainscript which hold the naviagation function and modal functions for the footer.
-    -   
+    -   The quiz begins when the button is clicked and the questions are chosen at random through the question array, once the last question is answered the points get tallyed bewteen the 3 choices.
+    
 
 
 ### Testing user Stories from User Experience (UX) Section

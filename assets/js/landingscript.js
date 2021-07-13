@@ -1,4 +1,6 @@
-/* Landing Page */
+// Landing Page
+//Hides the elements from the index page so the landing image and text appear first
+
 document.getElementById("loginbtn").addEventListener("click", loadHome);
 
 document.getElementById("hero-image").style.display = "none";
@@ -19,10 +21,10 @@ function loadHome() {
   document.getElementById("footer").style.display = "flex";
 }
 
-
 /* Home Page */
 
-// create needed constants
+// create needed constants for form using local storage
+
 const rememberMe = document.querySelector(".remember");
 const forgetMe = document.querySelector(".forget");
 const form = document.querySelector("form");

@@ -1,6 +1,6 @@
-/* Quiz */
+// Quiz Page
 
-// Event listener for clicks on the 'start the quiz' button. 
+// Event listener for clicks on the 'Start' button. 
 document.getElementById("beginquiz").addEventListener("click", startQuiz);
 const beginQuiz = document.getElementById("beginquiz");
 
@@ -10,7 +10,7 @@ let currentQuestion, shuffledQuestions;
 function startQuiz() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("question").style.display = "block";
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles questions 
     currentQuestion = 0;
     choiceButtonsHandler();
     updateQuestion();
@@ -33,6 +33,7 @@ let answerData = { // one object, with names as keys, scores as values
     titan: 0
 };
 
+// Goes through the shuffled questions and fills the data from the array to the HTML elements on the quiz page 
 function updateQuestion() {
   const currentQuestionObj = (shuffledQuestions[currentQuestion]);
   const questionDiv = document.getElementById("question");
@@ -45,7 +46,7 @@ function updateQuestion() {
   });
 }
 
-// Define what optionButtonClicked does
+
 function optionButtonClicked(e) {
     var target = e.target; 
     console.log(" target is", target);
@@ -72,32 +73,19 @@ function optionButtonClicked(e) {
     myTypes = [sortedScores[0][0]];
     if (sortedScores[1][1] === sortedScores[0][1]) myTypes.push(sortedScores[1][0]);
     let result = '';
-    if (myTypes.length === 1) result = "You are a " + myTypes[0];
-    else result = "You could either be a " + myTypes.join(" or a ");
+    if (myTypes.length === 1) result = "You are a " + myTypes[0]; // Shows most common answer
+    else result = "You could either be a " + myTypes.join(" or a "); //Shows both if there's a tie
     document.querySelector("#result .result-text").innerHTML = result;
     document.querySelector(".result-image").innerHTML=''; 
     myTypes.forEach(t => {
-    let src='';
+    let src=''; // Gets the appropriate class image from assets image folder
     if (t === "warlock")  src = 'warlock.jpg';
     else if (t === "titan") src = 'titan.jpg';
     else if (t === "hunter") src = 'hunter.jpg';
     if (src) document.querySelector(".result-image").innerHTML += `<img src="assets/images/pages/${t}3.png" />`;
   });
   
-  }
-
-  function restart() {
-      beginQuiz.innerText = "Restart";
-      document.getElementById("intro").style.display = "block";
-      document.getElementById("result").style.display = "block";
-      currentQuestion = 0;
-      answerData = {
-        Warlock: 0,
-        Hunter: 0,
-        Titan: 0
-      };
-      updateQuestion();
-  }
+}
 
   // ---- Questions and Choices ---- //
 
