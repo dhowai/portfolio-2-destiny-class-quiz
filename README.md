@@ -4,7 +4,7 @@ This site is for the potential new players for the Bungie first person shooter v
 
 ![Screen sizes](https://github.com/dhowai/portfolio-2-destinyquiz/blob/master/assets/images/readme/screen%20size%20image.png)
 
-The live link can be found here - https://dhowai.github.io/portfolio-2-destinyquiz/
+The live link can be found here - https://dhowai.github.io/portfolio-2-destiny-class-quiz/
 
 ## User Experience (UX)
 
